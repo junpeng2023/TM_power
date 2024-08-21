@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running pt_shell Version Q-2019.12-SP1 for linux64 -- Jan 14, 2020
-#@ # Date:   Wed Aug 21 15:12:48 2024
+#@ # Date:   Wed Aug 21 15:27:42 2024
 #@ # Run by: ge78pav@prakt5
 #@ 
 
@@ -877,5 +877,8 @@ set_app_var power_enable_analysis true
 read_verilog "/nas/ei/home/ge78pav/TM_power/TM_openlane/TM_openlane_single_min/TM_openlane_min_ios/TM_openlane_min_ios_min/netlist_0/low/netlist_0_post_par.v"
 current_design netlist_0
 link_design
+read_parasitics -format spef "/nas/ei/home/ge78pav/TM_power/TM_openlane/TM_openlane_single_min/TM_openlane_min_ios/TM_openlane_min_ios_min/netlist_0/low/spef/netlist_0.nom.spef"
+update_power
+report_power -net_power -nosplit -hierarchy > min_ios_min_0_low_spefnom.rpt
 exit
 if { [namespace which -command __pre_quit_tcl_procs] == "::__pre_quit_tcl_procs" } {   __pre_quit_tcl_procs}
