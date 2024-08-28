@@ -15,6 +15,6 @@ check_activity [get_pins *]
 set_power_analysis_options -include all_with_leaf -separate_power_waveform all -waveform_format out -waveform_output /nas/ei/home/ge78pav/TM_power/TM_openlane/TM_openlane_single_mid/TM_openlane_mid_ad/TM_openlane_mid_ad_max/netlist_1/low/data/netlist_1_sdf_p
 
 update_power
-report_power -net_power -nosplit -hierarchy > /nas/ei/home/ge78pav/TM_power/TM_openlane/TM_openlane_single_mid/TM_openlane_mid_ad/TM_openlane_mid_ad_max/netlist_1/low/data/netlist_1_sdf_p_report.txt
+report_power -net_power -nosplit -hierarchy > /nas/ei/home/ge78pav/TM_power/TM_openlane/TM_openlane_single_mid/TM_openlane_mid_ad/TM_openlane_mid_ad_max/netlist_1/low/data/netlist_1_SDF_p_report.txt
 
 exit

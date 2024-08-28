@@ -135,7 +135,7 @@ wire \out9 ;
 // Instantiate the Unit Under Test (UUT)
 netlist_1 uut (.\clk (\clk ), .\in0 (\in0 ), .\in1 (\in1 ), .\in10 (\in10 ), .\in11 (\in11 ), .\in12 (\in12 ), .\in13 (\in13 ), .\in14 (\in14 ), .\in15 (\in15 ), .\in16 (\in16 ), .\in17 (\in17 ), .\in18 (\in18 ), .\in19 (\in19 ), .\in2 (\in2 ), .\in20 (\in20 ), .\in21 (\in21 ), .\in22 (\in22 ), .\in23 (\in23 ), .\in24 (\in24 ), .\in25 (\in25 ), .\in26 (\in26 ), .\in27 (\in27 ), .\in28 (\in28 ), .\in29 (\in29 ), .\in3 (\in3 ), .\in30 (\in30 ), .\in31 (\in31 ), .\in32 (\in32 ), .\in33 (\in33 ), .\in34 (\in34 ), .\in35 (\in35 ), .\in36 (\in36 ), .\in37 (\in37 ), .\in38 (\in38 ), .\in39 (\in39 ), .\in4 (\in4 ), .\in40 (\in40 ), .\in41 (\in41 ), .\in42 (\in42 ), .\in43 (\in43 ), .\in44 (\in44 ), .\in45 (\in45 ), .\in46 (\in46 ), .\in47 (\in47 ), .\in48 (\in48 ), .\in49 (\in49 ), .\in5 (\in5 ), .\in50 (\in50 ), .\in51 (\in51 ), .\in52 (\in52 ), .\in53 (\in53 ), .\in54 (\in54 ), .\in55 (\in55 ), .\in56 (\in56 ), .\in57 (\in57 ), .\in58 (\in58 ), .\in59 (\in59 ), .\in6 (\in6 ), .\in60 (\in60 ), .\in61 (\in61 ), .\in7 (\in7 ), .\in8 (\in8 ), .\in9 (\in9 ), .\rst (\rst ), .\out0 (\out0 ), .\out1 (\out1 ), .\out10 (\out10 ), .\out11 (\out11 ), .\out12 (\out12 ), .\out13 (\out13 ), .\out14 (\out14 ), .\out15 (\out15 ), .\out16 (\out16 ), .\out17 (\out17 ), .\out18 (\out18 ), .\out19 (\out19 ), .\out2 (\out2 ), .\out20 (\out20 ), .\out21 (\out21 ), .\out22 (\out22 ), .\out23 (\out23 ), .\out24 (\out24 ), .\out25 (\out25 ), .\out26 (\out26 ), .\out27 (\out27 ), .\out28 (\out28 ), .\out29 (\out29 ), .\out3 (\out3 ), .\out30 (\out30 ), .\out31 (\out31 ), .\out32 (\out32 ), .\out33 (\out33 ), .\out34 (\out34 ), .\out35 (\out35 ), .\out36 (\out36 ), .\out37 (\out37 ), .\out38 (\out38 ), .\out39 (\out39 ), .\out4 (\out4 ), .\out40 (\out40 ), .\out41 (\out41 ), .\out42 (\out42 ), .\out43 (\out43 ), .\out44 (\out44 ), .\out45 (\out45 ), .\out46 (\out46 ), .\out47 (\out47 ), .\out48 (\out48 ), .\out49 (\out49 ), .\out5 (\out5 ), .\out50 (\out50 ), .\out51 (\out51 ), .\out52 (\out52 ), .\out53 (\out53 ), .\out54 (\out54 ), .\out55 (\out55 ), .\out56 (\out56 ), .\out57 (\out57 ), .\out58 (\out58 ), .\out59 (\out59 ), .\out6 (\out6 ), .\out60 (\out60 ), .\out61 (\out61 ), .\out7 (\out7 ), .\out8 (\out8 ), .\out9  (\out9 ));
  
-integer i = 0;reg[63:0] in_vector [0:999];
+integer i = 0;reg[63:0] in_vector [0:9];
 parameter test_data = "/nas/ei/home/ge78pav/TM_power/TM_openlane/TM_openlane_single_mid/TM_openlane_mid_ad/TM_openlane_mid_ad_max/netlist_1/low/netlist_1_input_vector.txt";
  
 initial begin
@@ -152,7 +152,7 @@ always
  
 always @(posedge clk)
  begin
-if (i<1000) begin
+if (i<10) begin
 {\clk , \in0 , \in1 , \in10 , \in11 , \in12 , \in13 , \in14 , \in15 , \in16 , \in17 , \in18 , \in19 , \in2 , \in20 , \in21 , \in22 , \in23 , \in24 , \in25 , \in26 , \in27 , \in28 , \in29 , \in3 , \in30 , \in31 , \in32 , \in33 , \in34 , \in35 , \in36 , \in37 , \in38 , \in39 , \in4 , \in40 , \in41 , \in42 , \in43 , \in44 , \in45 , \in46 , \in47 , \in48 , \in49 , \in5 , \in50 , \in51 , \in52 , \in53 , \in54 , \in55 , \in56 , \in57 , \in58 , \in59 , \in6 , \in60 , \in61 , \in7 , \in8 , \in9 , \rst }=in_vector[i];
 i=i+1;
  end
