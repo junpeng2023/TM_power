@@ -1,5 +1,5 @@
-set_app_var target_library "circuit_data/stdlib/stdcells.db"
-set_app_var link_library "* circuit_data/stdlib/stdcells.db"
+set_app_var target_library "/nas/ei/home/ge78pav/stdlib_db/stdcells.db"
+set_app_var link_library "* /nas/ei/home/ge78pav/stdlib_db/stdcells.db"
 
 set_app_var power_enable_analysis true
 set_app_var power_analysis_mode time_based
@@ -15,6 +15,6 @@ check_activity [get_pins *]
 set_power_analysis_options -include all_with_leaf -separate_power_waveform all -waveform_format out -waveform_output /nas/ei/home/ge78pav/TM_power/TM_openlane/TM_openlane_single_mid/TM_openlane_mid_ad/TM_openlane_mid_ad_max/netlist_1/high/data/netlist_1_sdf_p
 
 update_power
-report_power -net_power -nosplit -hierarchy > /nas/ei/home/ge78pav/TM_power/TM_openlane/TM_openlane_single_mid/TM_openlane_mid_ad/TM_openlane_mid_ad_max/netlist_1/high/data/netlist_1_sdf_p_report.txt
+report_power -net_power -nosplit -hierarchy > /nas/ei/home/ge78pav/TM_power/TM_openlane/TM_openlane_single_mid/TM_openlane_mid_ad/TM_openlane_mid_ad_max/netlist_1/high/data/netlist_1_SDF_p_report.txt
 
 exit
